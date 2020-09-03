@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c3cfe2;
+    height: 100vh;
+    font-family: arial;
+}
+
+.socialmedia {
+    display: flex;
+    position: fixed;
+    right: -170px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.socialmedia__container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.6s ease; 
+    &:hover {
+        transform: translateX(-170px);
+    }
+}
+
+a {
+    padding: 10px;
+    color: white;
+    font-size: 0.8rem;
+} 
+
+.socialmedia__container.blog {
+    background-color: #e17b77;
+}
+
+.socialmedia__container.twitter {
+    background-color: #00aced;
+}
+
+.socialmedia__container.linkedin {
+    background-color: #007bb6;
+}
+
+.socialmedia__container.facebook {
+    background-color: #3b5998;
+}
+
+.socialmedia__container.github {
+    background-color: #333;
+}
+
+.icon::before {
+    -moz-osx-font-smoothing: white;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+    padding: 10px;
+    font-size: 1rem; 
+    color: white;
+} 
+//opmerking: ik kan echt niet vinden waarom het 'blog/laptop' icoontje niet werkt op de website. Ik heb ze alle vijf op dezelfde manier gestyled. 
+.socialmedia__icon--blog::before {
+    content:"\f5fc";
+    font-family: "Font Awesome 5 Free";
+}
+
+.socialmedia__icon--twitter::before {
+    content: "\f099";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.socialmedia__icon--linkedin::before {
+    content: "\f0e1";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.socialmedia__icon--facebook::before {
+    content: "\f39e";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.socialmedia__icon--github::before {
+    content: "\f09b";
+    font-family: "Font Awesome 5 Brands";
+}
